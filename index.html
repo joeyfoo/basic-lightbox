@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+        html{
+            font-size: 16px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 1rem;
+        }
+        body{
+            max-width: 640px;
+
+            margin: 0 auto;
+        }
+        pre{
+            padding: 1rem;
+            background-color: #ddd;
+            white-space: pre-wrap;
+        }
+    </style>
+
+    <title>basic-lightbox</title>
+  </head>
+  <body>
+    <h1>basic-lightbox</h1>
+
+    <p>A basic vanilla Javascript lightbox script with no dependencies and a single <code>&lt;script&gt;</code> include.</p>
+
+    <h2>How to use</h2>
+    <h3>Adding the script</h3>
+    <p>Download and include the <code>lightbox.js</code> script at the bottom of your <code>&lt;body&gt;</code> tag.</p>
+    <pre>&lt;script src="path/to/lightbox.js"&gt;&lt;/script&gt;</pre>
+    
+    <h3>Triggering the lightbox</h3>
+    <p><strong>Images:</strong> Add a <code>data-lightbox</code> attribute to an image link. 
+    <pre>&lt;a href="path/to/full-size-image.jpg" data-lightbox="This is an example photo embed."&gt;...&lt;/a&gt;</pre>
+    <p><a href="example_image.jpg" data-lightbox="This is an example photo embed.">Test this</a></p>
+    <p><strong>YouTube:</strong> Same as images, except use a link that starts with <code>https://www.youtube.com/watch</code>.
+    <pre>&lt;a href="https://www.youtube.com/watch?v=C61bhu8eI3o" data-lightbox="This is an example YouTube embed."&gt;...&lt;/a&gt;</pre>
+    <a href="https://www.youtube.com/watch?v=C61bhu8eI3o" data-lightbox="This is an example YouTube embed.">Test this</a>
+
+    <h2>Attribution</h2>
+    <p>Inspired by <a href="https://lokeshdhakar.com/projects/lightbox2/">lightbox2</a>.</p>
+    <p>Example image by <a href="https://unsplash.com/photos/UMo01PKPU9o">Saira on Unsplash</a>.</p>
+
+    <script src="lightbox.js"></script>
+  </body>
+</html>
