@@ -2,6 +2,8 @@
 
 A basic vanilla Javascript lightbox script with no dependencies and a single `<script>` include.
 
+## [View demo](https://joeyfoo.com/basic-lightbox/)
+
 ## How to use
 
 ### Adding the script
