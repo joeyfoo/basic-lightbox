@@ -53,13 +53,21 @@ function openLightbox(event){
     if(isIframe){
         lightboxImage = createElement("iframe", "lightbox-image");
         lightboxImage.allowFullscreen = "true";
+        lightboxImage.src = imageUrl;
+        lightboxContent.appendChild(lightboxImage);
     }
     else{
+        let lightboxLoading = createElement("div", "lightbox-loading", "Loading...");
+        lightboxModal.appendChild(lightboxLoading);
+
         lightboxImage = createElement("img", "lightbox-image");
         lightboxImage.alt = imageDescription;
+        lightboxImage.src = imageUrl;
+        lightboxImage.onload = function(){
+            lightboxContent.appendChild(lightboxImage);
+            lightboxLoading.remove();
+        };
     }
-    lightboxImage.src = imageUrl;
-    lightboxContent.appendChild(lightboxImage);
 
     let lightboxMeta = createElement("div", "lightbox-meta");
     lightboxModal.appendChild(lightboxMeta);
@@ -113,6 +121,7 @@ function addCssStyling(){
             height: 100%;
             width: 100%;
             z-index: 15;
+            color: #fff;
             background-color: rgba(0, 0, 0, 0.75);
             backdrop-filter: blur(5px);
             animation: 0.5s modal-enter linear;
@@ -131,7 +140,9 @@ function addCssStyling(){
         #lightbox-meta{
             text-align: center;
             animation: 1s text-enter linear;
-            color: #fff;
+        }
+        #lightbox-loading{
+            margin: 128px auto;
         }
         #lightbox-description{
         }
