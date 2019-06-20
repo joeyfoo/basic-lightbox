@@ -16,7 +16,7 @@ function initialiseLightboxLinks(){
 
 function openLightbox(event){
     event.preventDefault();
-    let target = getLightboxElement(event.path);
+    let target = getLightboxElement(event.target);
     let isIframe = false;
 
     let imageUrl = target.href;
@@ -99,12 +99,13 @@ function createElement(tagName, id, text){
     return e;
 }
 
-function getLightboxElement(path){
-    for (let i = 0; i < path.length; i++) {
-        let element = path[i];
+function getLightboxElement(target){
+    let element = target;
+    while(element.parentElement != null){
         if("lightbox" in element.dataset){
             return element;
         }
+        element = element.parentElement;
     }
 }
 
